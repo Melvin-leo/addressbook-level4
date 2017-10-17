@@ -24,9 +24,9 @@ public interface ReadOnlyMeeting {
     default boolean isSameStateAs(ReadOnlyMeeting other) {
         return other == this // short circuit if same object
                 || (other != null // this is first to avoid NPE below
-                && other.getName().equals(this.getName()) // state checks here onwards
-                && other.getDate().equals(this.getDate())
-                //&& other.getTime().equals(this.getTime())
+                && other.getDate().equals(this.getDate())// state checks here onwards
+                && other.getPersonName().equals(this.getPersonName())
+                && other.getPersonPhone().equals(this.getPersonPhone())
                 && other.getPlace().equals(this.getPlace()));
     }
 
