@@ -25,6 +25,7 @@ public interface ReadOnlyMeeting {
         return other == this // short circuit if same object
                 || (other != null // this is first to avoid NPE below
                 && other.getDate().equals(this.getDate())// state checks here onwards
+                && other.getName().equals(this.getName())
                 && other.getPersonName().equals(this.getPersonName())
                 && other.getPersonPhone().equals(this.getPersonPhone())
                 && other.getPlace().equals(this.getPlace()));
