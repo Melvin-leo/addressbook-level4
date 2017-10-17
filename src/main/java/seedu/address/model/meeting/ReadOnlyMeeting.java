@@ -37,10 +37,12 @@ public interface ReadOnlyMeeting {
     default String getAsText() {
         final StringBuilder builder = new StringBuilder();
         builder.append(getName())
+                .append("\nMeeting with: ")
+                .append(getPersonName())
+                .append("\nContact Number: ")
+                .append(getPersonPhone())
                 .append("\nDate and Time: ")
                 .append(getDate())
-                //.append(" Time: ")
-                //.append(getTime())
                 .append("\nLocation: ")
                 .append(getPlace());
         return builder.toString();
