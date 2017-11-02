@@ -44,24 +44,6 @@ image::AddresbookLabels.png[width="790"]
 d. Meetings List +
 &#160;e. Footer bar
 
-..  If there is a meeting scheduled on the day of logging in, a reminder will pop up for you to acknowledge.
-+
-image::Reminder.png[width="600"]
-+
-..  To show the urgency of the meeting. Colours are assigned to the card by comparing the date and time in the meeting class to the date and time of the log in.
-
-    * `darkRed` : Meeting is in next 24 hours.
-+
-image::MeetingCard1.png[width="200"]
-+
-    * `red` : Meeting is in next 48 hours.
-+
-image::MeetingCard2.png[width="200"]
-+
-    * `orangeRed` : Meeting is in next 72 hours.
-+
-image::MeetingCard3.png[width="200"]
-+
 .  Type the command in the command box and press kbd:[Enter] to execute it. +
 e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 
@@ -75,8 +57,7 @@ e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 
 .  Refer to the link:#features[Features] section below for details of each command.
 
-== Features
-
+== Commands
 ====
 *Command Format*
 
@@ -200,7 +181,7 @@ Input format for Date and Time is "DD-MM-YYYY HH:MM"
 * Creation of group meetings
 ** You can create meetings with multiple people at the same timing for an event(NameMeeting). In this case, multiple `Meeting Cards` will be created. A group meeting consists of meetings that have the same `NameMeeting`,`DateTime` and `Place` but with different person.
 +
-image::MeetingGroup.png[width="200"]
+image::MeetingGroup.png[align="center"][width="200"]
 +
 ** However, when opening Schedubook, if your next meeting is a group meeting, the reminder will show.
 +
@@ -208,7 +189,7 @@ image::Reminder(1).png[width="600"]
 +
 * When adding a new meeting, you will be prompted to change the date and time of meeting if it will result in a clash with an existing meeting.
 +
-image::MeetingClash.png[width="500"]
+image::MeetingClash.png[align="center"][width="500"]
 +
 ****
 
@@ -358,6 +339,36 @@ Format: `exit`
 
 Address book data are saved in the hard disk automatically after any command that changes the data. +
 There is no need to save manually.
+
+== Features
+=== Meetings
+
+After you add meetings, the meetings will be represented by the meeting cards at the meeting list panel for you to keep track of your meetings. The meeting will display the purpose of the meeting, the date, time and the venue of the meeting, who you are meeting with and their contact number.
+
+
+image::MeetingCard.png[align="center"][width="200"]
+
+==== Urgency
+  To show the urgency of the meeting. Colours are assigned to the card by comparing the date and time in the meeting class to the date and time of the log in.
+
+    * `darkRed` : Meeting is in next 24 hours.
++
+image::MeetingCard1.png[align="center"][width="200"]
++
+    * `red` : Meeting is in next 48 hours.
++
+image::MeetingCard2.png[align="center"][width="200"]
++
+    * `orangeRed` : Meeting is in next 72 hours.
++
+image::MeetingCard3.png[align="center"][width="200"]
+
+==== Pop up reminder
+..  If there is a meeting scheduled on the day of logging in, a reminder that describes your next meeting will pop up for you to acknowledge.
++
+image::Reminder.png[width="600"]
++
+
 
 == FAQ
 
