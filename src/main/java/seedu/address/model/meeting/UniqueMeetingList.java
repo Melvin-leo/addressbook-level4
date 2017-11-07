@@ -87,8 +87,20 @@ public class UniqueMeetingList implements Iterable<Meeting> {
             throw new MeetingClashException();
         }
         internalMeetingList.add(new Meeting(toAdd));
-        internalMeetingList.sort((m1, m2) -> m1.getActualDate(m1.getDate().toString())
+        sort(internalMeetingList);
+
+    }
+
+    /**
+     *  Sorts the meeting list in chronological order
+     * @param list
+     * @return MeetingList
+     */
+    private ObservableList<Meeting> sort(ObservableList<Meeting> list){
+        list.sort((m1, m2) -> m1.getActualDate(m1.getDate().toString())
                 .compareTo(m2.getActualDate(m2.getDate().toString())));
+
+        return list;
     }
 
     /**
@@ -114,8 +126,7 @@ public class UniqueMeetingList implements Iterable<Meeting> {
         }
 
         internalMeetingList.set(index, new Meeting(editedMeeting));
-        internalMeetingList.sort((m1, m2)-> m1.getActualDate(m1.getDate().toString())
-                .compareTo(m2.getActualDate(m2.getDate().toString())));
+        sort(internalMeetingList);
     }
 
     //@@author nelsonqyj

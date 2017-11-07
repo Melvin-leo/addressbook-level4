@@ -103,7 +103,7 @@ public class SelectMeetingCommand extends Command {
             throw new CommandException(Messages.MESSAGE_INVALID_MEETING_DISPLAYED_INDEX);
         }
 
-        EventsCenter.getInstance().post(new JumpToListRequestEvent(targetMeetingIndex));
+        EventsCenter.getInstance().post(new JumpToMeetingListRequestEvent(targetMeetingIndex));
         return new CommandResult(String.format(MESSAGE_SELECT_MEETING_SUCCESS, targetMeetingIndex.getOneBased()));
 
     }

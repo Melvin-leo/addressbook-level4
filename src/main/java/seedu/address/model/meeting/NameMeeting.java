@@ -53,7 +53,7 @@ public class NameMeeting {
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof NameMeeting // instanceof handles nulls
-                && this.fullName.equals(((NameMeeting) other).fullName)); // state check
+                && this.fullName.equalsIgnoreCase(((NameMeeting) other).fullName)); // state check
     }
 
     @Override

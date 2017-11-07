@@ -46,7 +46,20 @@ public class UniquePersonList implements Iterable<Person> {
             throw new DuplicatePersonException();
         }
         internalList.add(new Person(toAdd));
+        sort(internalList);
     }
+    //@@author nelsonqyj
+    /**
+     * Sort Person list in Alphabetical order
+     * @param list
+     * @return Person List
+     */
+    private ObservableList<Person> sort(ObservableList<Person> list){
+        internalList.sort((m1, m2)-> m1.getName().toString()
+                .compareTo(m2.getName().toString()));
+        return list;
+    }
+    //@@author 
 
     /**
      * Replaces the person {@code target} in the list with {@code editedPerson}.

@@ -1,4 +1,45 @@
 # Melvin-leo
+###### \java\seedu\address\commons\events\ui\JumpToMeetingListRequestEvent.java
+``` java
+/**
+ * Indicates a request to jump to the list of meetings
+ */
+public class JumpToMeetingListRequestEvent extends BaseEvent {
+
+    public final int targetIndex;
+
+    public JumpToMeetingListRequestEvent(Index targetIndex) {
+        this.targetIndex = targetIndex.getZeroBased();
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
+}
+```
+###### \java\seedu\address\commons\events\ui\MeetingPanelSelectionChangedEvent.java
+``` java
+/**
+ * Represents a selection change in the Meeting List Panel
+ */
+public class MeetingPanelSelectionChangedEvent extends BaseEvent {
+    private final MeetingCard newSelection;
+
+    public MeetingPanelSelectionChangedEvent(MeetingCard newSelection) {
+        this.newSelection = newSelection;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName();
+    }
+
+    public MeetingCard getNewSelection() {
+        return newSelection;
+    }
+}
+```
 ###### \java\seedu\address\logic\commands\AddMeetingCommand.java
 ``` java
     /**
@@ -959,7 +1000,7 @@ public class MeetingListPanel extends UiPart<Region> {
     }
 
     @Subscribe
-    private void handleJumpToListRequestEvent(JumpToListRequestEvent event) {
+    private void handleJumpToMeetingListRequestEvent(JumpToMeetingListRequestEvent event) {
         logger.info(LogsCenter.getEventHandlingLogMessage(event));
         scrollTo(event.targetIndex);
     }
