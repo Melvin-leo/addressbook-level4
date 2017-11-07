@@ -59,7 +59,7 @@ public class UniquePersonList implements Iterable<Person> {
                 .compareTo(m2.getName().toString()));
         return list;
     }
-    //@@author 
+    //@@author
 
     /**
      * Replaces the person {@code target} in the list with {@code editedPerson}.
