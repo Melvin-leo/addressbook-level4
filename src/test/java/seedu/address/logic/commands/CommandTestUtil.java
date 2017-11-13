@@ -3,7 +3,10 @@ package seedu.address.logic.commands;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_DATE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_INDEX;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_LOCATION;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
@@ -47,6 +50,19 @@ public class CommandTestUtil {
     public static final String VALID_INDEX_BIKING = "2";
     public static final String VALID_PLACE_ACTIVITY = "Vivocity";
     public static final String VALID_PLACE_BIKING = "Bishan";
+    public static final String VALID_IMPT_ACTIVITY = "1";
+    public static final String VALID_IMPT_BIKING = "1";
+
+    public static final String NAME_DESC_ACTIVITY = " " + PREFIX_NAME + VALID_NAME_ACTIVITY;
+    public static final String NAME_DESC_BIKING = " " + PREFIX_NAME + VALID_NAME_BIKING;
+    public static final String DATETIME_DESC_ACTIVITY = " " + PREFIX_DATE + VALID_DATE_ACTIVITY;
+    public static final String DATETIME_DESC_BIKING = " " + PREFIX_DATE + VALID_DATE_BIKING;
+    public static final String PLACE_DESC_ACTIVITY = " " + PREFIX_LOCATION + VALID_PLACE_ACTIVITY;
+    public static final String PLACE_DESC_BIKING = " " + PREFIX_LOCATION + VALID_PLACE_BIKING;
+    public static final String INDEX_DESC_ACTIVITY = " " + PREFIX_INDEX + VALID_INDEX_ACTIVITY;
+    public static final String INDEX_DESC_BIKING = " " + PREFIX_INDEX + VALID_INDEX_BIKING;
+    public static final String IMPT_DESC_ACTIVITY = " " + PREFIX_TAG + VALID_IMPT_ACTIVITY;
+    public static final String IMPT_DESC_BIKING = " " + PREFIX_TAG + VALID_IMPT_BIKING;
 
     public static final String NAME_DESC_AMY = " " + PREFIX_NAME + VALID_NAME_AMY;
     public static final String NAME_DESC_BOB = " " + PREFIX_NAME + VALID_NAME_BOB;
